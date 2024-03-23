@@ -10,4 +10,5 @@ Pada commit init, saya membuat response terhadap request ke 127.0.0.1:7878 yang 
 3. Message Body
 
 <br/>
-Terakhir, response akan dikirim dengan menggunakan format!("{status_line}\r\nContent-Length: {length}\r\n\r\ {contents}"); yang nantinya akan mereturn contents yang merupakan path ke file html yang mau di return
+Terakhir, response akan dikirim dengan menggunakan :
+- format!("{status_line}\r\nContent-Length: {length}\r\n\r\ {contents}");

@@ -9,6 +9,7 @@ Pada commit init, saya membuat response terhadap request ke 127.0.0.1:7878 yang 
 2. CRLF Header
 3. Message Body
 
-<br/>
-Terakhir, response akan dikirim dengan menggunakan :
+Terakhir, response akan dikirim dengan menggunakan:
 - format!("{status_line}\r\nContent-Length: {length}\r\n\r\ {contents}");
+![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_html_page_2.png)
+![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_vs_code_2.png)

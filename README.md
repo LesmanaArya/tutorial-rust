@@ -1,2 +1,2 @@
-# h2 Commit 1 : Handle Request
+## Commit 1 : Handle Request
 Pada commit ini, saya membuat inisialisasi program rust untuk memberikan suatu response ke web server. Terdapat 2 method yang dibuat di commit ini, yaitu main dan handle_connection. Method handle_request digunakan untuk mengirim request ke web server sedangkan method main digunakan untuk menjalankan program keseluruhan dan dalam hal ini, menyuruh handle_connection untuk mengirim request ke 127.0.0.1:7878

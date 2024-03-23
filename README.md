@@ -4,7 +4,7 @@ Pada commit ini, saya membuat inisialisasi program rust untuk memberikan suatu r
 ![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_chrome_output_1.png)
 
 ## Commit 2: Writing a Response and Returning HTML
-Pada commit init, saya membuat response terhadap request ke 127.0.0.1:7878 yang dibuat pada Commit 1. Pada method handle_request sekarang terdapat variabel status_line yang berfungsi sebagai status untuk response yang dikirim, yaitu 1.1 200 yang berarti berhasil. Selanjutnya juga ada variabel contents yang akan membaca input file html yang mau di return. Terdapat juga variabel length untuk memastikan bahwa jumlah parameter response yang diberikan valid memenuhi format:
+Pada commit ini, saya membuat response terhadap request ke 127.0.0.1:7878 yang dibuat pada Commit 1. Pada method handle_request sekarang terdapat variabel status_line yang berfungsi sebagai status untuk response yang dikirim, yaitu 1.1 200 yang berarti berhasil. Selanjutnya juga ada variabel contents yang akan membaca input file html yang mau di return. Terdapat juga variabel length untuk memastikan bahwa jumlah parameter response yang diberikan valid memenuhi format:
 1. HTTP Version Status Code CRLF Reason-Phrase
 2. CRLF Header
 3. Message Body
@@ -13,3 +13,7 @@ Terakhir, response akan dikirim dengan menggunakan:
 - format!("{status_line}\r\nContent-Length: {length}\r\n\r\ {contents}");
 ![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_html_page_2.png)
 ![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_vs_code_2.png)
+
+## Commit 3: Simulating Slow Response
+Commit ketiga ini adalah menghandle slow response. Seringkali ketika kita melakukan request ke website, website terlalu lama dalam memberikan response karena masalah-masalah tertentu. Di commit ini, dilakukan sedikit modifikasi pada method handle_request yaitu jika dalam 5 detik website tidak memberikan response, maka akan langsung ditampilkan file 404.html. File ini saya buat untuk memberikan info bahwa request sedang tidak bisa diproses. Sebaliknya, jika dalam 5 detik response berhasil diberikan, maka akan di return file hello.html
+![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_html_not_found_.png)

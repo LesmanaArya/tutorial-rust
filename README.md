@@ -16,4 +16,4 @@ Terakhir, response akan dikirim dengan menggunakan:
 
 ## Commit 3: Simulating Slow Response
 Commit ketiga ini adalah menghandle slow response. Seringkali ketika kita melakukan request ke website, website terlalu lama dalam memberikan response karena masalah-masalah tertentu. Di commit ini, dilakukan sedikit modifikasi pada method handle_request yaitu jika dalam 5 detik website tidak memberikan response, maka akan langsung ditampilkan file 404.html. File ini saya buat untuk memberikan info bahwa request sedang tidak bisa diproses. Sebaliknya, jika dalam 5 detik response berhasil diberikan, maka akan di return file hello.html
-![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_html_not_found_.png)
+![](https://github.com/LesmanaArya/tutorial-rust/blob/main/img/ss_html_not_found.png)
